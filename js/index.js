@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1280
-canvas.height = 768
+canvas.width = 19200
+canvas.height = 1080
 
 c.fillStyle = 'white'
 c.fillRect(0, 0, canvas.width, canvas.height)
@@ -36,8 +36,9 @@ const image = new Image()
 image.onload = () => {
   animate()
 }
-image.src = 'img/gameMap.png'
-
+image.src = 'img/fon.jpg'
+image.width = 1000
+image.height = 1000
 const enemies = []
 
 function spawnEnemies(spawnCount) {
@@ -62,7 +63,7 @@ spawnEnemies(enemyCount)
 function animate() {
   const animationId = requestAnimationFrame(animate)
 
-  c.drawImage(image, 0, 0)
+  c.drawImage(image, 0, 0,19200,1080)
 
   for (let i = enemies.length - 1; i >= 0; i--) {
     const enemy = enemies[i]
