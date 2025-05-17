@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1920
-canvas.height = 1080
+canvas.width = 1520
+canvas.height = 720
 
 c.fillStyle = 'white'
 c.fillRect(0, 0, canvas.width, canvas.height)
@@ -36,7 +36,7 @@ const image = new Image()
 image.onload = () => {
   animate()
 }
-image.src = 'img/fonimba.jpg'
+image.src = 'img/zov.jpg'
 const enemies = []
 
 function spawnEnemies(spawnCount) {
@@ -61,7 +61,7 @@ spawnEnemies(enemyCount)
 function animate() {
   const animationId = requestAnimationFrame(animate)
 
-  c.drawImage(image, 0, 0,1920,1080)
+  c.drawImage(image, 0, 0,1520,720)
 
   for (let i = enemies.length - 1; i >= 0; i--) {
     const enemy = enemies[i]
